@@ -1,0 +1,376 @@
+﻿<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+    body{
+      background-color:#0b132b;
+     }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+     }
+
+ 
+
+   .but{
+     border:none;
+     padding:6px;
+     border-radius:10px;
+     cursor:pointer; 
+     width:400px;
+     margin-top:5px;
+     background-color:#3a506b;
+
+     }
+
+    .but:hover{
+      background-color:#5bc0be;
+     }
+
+   p{
+    color:#ffffff;
+     font-style:italic;
+     }
+
+    body{
+      text-align:center;
+
+
+    }
+
+    .cont{
+
+        padding:30px;
+        background-color:#1c2541;
+        width:500px;
+        height:400px;
+        border-radius:20px;
+
+      }
+
+     header{
+        padding:30px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+      }
+
+      h1{
+        color:#ffd700;
+        font-style:italic;
+       }
+
+
+  </style>
+
+  </head>
+ <body>
+  <header>
+   <div class='cont'>
+     <div class='soru-box'>
+        <h1>Bilgi Yarışmasına Hoşgeldiniz</h1>
+       <br>
+      <div class='SORU'><p id='soru'>Soru</p></div>
+       <br>
+         <button class='but' id='a'><p id='A'>A</p></button>
+          <br>
+         <button class='but' id='b'><p id='B'>B</p></button>
+          <br>
+         <button class='but' id='c'><p id='C'>C</p></button>
+          <br>
+         <button class='but' id='d'><p id='D'>D</p></button>      
+       </div>    
+   </div>
+ <header>
+
+ <script> 
+   let soru = document.getElementById('soru');
+   let skor = 0;
+   let A = document.getElementById('A');
+   let B = document.getElementById('B');
+   let C = document.getElementById('C');
+   let D = document.getElementById('D');
+   //soru butonlari
+   let a = document.getElementById('a');
+   let b = document.getElementById('b');
+   let c = document.getElementById('c');
+   let d = document.getElementById('d');
+
+   function soru1(){
+         soru.textContent = "Eratosthenes Dünya'nın çevre ölçüsünü nasıl hesaplamıştır?";
+         A.textContent = "Tycho Brahe vefat etdikten sonra notlarını okuyarak";
+         B.textContent = "Modern teknolojiler kullanarak";
+         C.textContent = "Tahmin yöntemi ile";
+         D.textContent = "İskenderiye'ye ve Syene'ye diktiği çubukların gölge bolarından yola çıkarak";
+         // d doğru
+         d.onclick = function(){
+           window.alert('doğru');
+           soru2();
+           skor++;
+          }
+         a.onclick = function(){
+           window.alert('yanlış');
+          }
+         b.onclick = function(){
+           window.alert('yanlış');
+           skor--;
+                  
+         }        
+         c.onclick = function(){
+           window.alert('yanlış');
+           skor--;
+                  
+         }
+      }
+   function soru2(){
+         soru.textContent = "Kepler -eliptik yörünge- keşvinden önce kiminle çalışdı";
+         A.textContent = "Kopernik";
+         B.textContent = "Vishniavk";
+         C.textContent = "Tycho Brahe";
+         D.textContent = "Stephen Hawking";
+         // c doğru
+         c.onclick = function(){
+           window.alert('doğru');
+           soru3();
+           skor++;
+          }
+         a.onclick = function(){
+           window.alert('yanlış');
+          }
+         b.onclick = function(){
+           window.alert('yanlış');
+           skor--;
+                  
+         }        
+         d.onclick = function(){
+           window.alert('yanlış');
+           skor--;
+                  
+         }
+      }
+   function soru3(){
+         soru.textContent = "Kepler'in severek savunduğu, ancak yanlış olduğunu anladığında değiştirdiği düşüncesi nedir?";
+         A.textContent = "evrim teorisi";
+         B.textContent = "Üç boyutlu beş mükemmel cisim teorisi";
+         C.textContent = "kütleçekim teorisi";
+         D.textContent = "big-bang teorisi";
+         // b doğru
+         b.onclick = function(){
+           window.alert('doğru');
+           soru4();
+           skor++;
+          }
+         a.onclick = function(){
+           window.alert('yanlış');
+          }
+         c.onclick = function(){
+           window.alert('yanlış');
+           skor--;
+                  
+         }        
+         d.onclick = function(){
+           window.alert('yanlış');
+           skor--;
+                  
+         }
+      }
+   function soru4(){
+         soru.textContent = "Doppler etkisi nedir";
+         A.textContent = "Güneş patlamalarının gözlenmesi";
+         B.textContent = "cisimlerin uzakdan daha küçük gözükmesi";
+         C.textContent = "renk frekanslarına göre cisimlerin bizden uzaklaşması";
+         D.textContent = "Ay'ın devinimi";
+         // c doğru
+         c.onclick = function(){
+           window.alert('doğru');
+           soru5();
+           skor++;
+          }
+         a.onclick = function(){
+           window.alert('yanlış');
+          }
+         b.onclick = function(){
+           window.alert('yanlış');
+           skor--;
+                  
+         }        
+         d.onclick = function(){
+           window.alert('yanlış');
+           skor--;
+                  
+         }
+      }
+   function soru5(){
+         soru.textContent = "Vishniack'ın -kurt kapanı- projesinin amacı nedir";
+         A.textContent = "Kurtları evcilleştirmek";
+         B.textContent = "Uzay'a uydu göndermek";
+         C.textContent = "Venüs'ün uydularını saptamak";
+         D.textContent = "Mars'da mikroskobik yaşam olup olmadığını anlamak";
+         // d doğru
+         d.onclick = function(){
+           window.alert('doğru');
+           soru6();
+           skor++;
+          }
+         a.onclick = function(){
+           window.alert('yanlış');
+          }
+         c.onclick = function(){
+           window.alert('yanlış');
+           skor--;
+                  
+         }        
+         b.onclick = function(){
+           window.alert('yanlış');
+           skor--;
+                  
+         }
+    }
+
+     function soru6(){
+         soru.textContent = "Aşağıdakilerden hangisi Mars'a gönderilmiş bir uzay aracıdır";
+         A.textContent = "Tog";
+         B.textContent = "Voyager2";
+         C.textContent = "Venera";
+         D.textContent = "Viking";
+         // d doğru
+         d.onclick = function(){
+           window.alert('doğru');
+           soru7();
+           skor++;
+          }
+         a.onclick = function(){
+           window.alert('yanlış');
+          }
+         b.onclick = function(){
+           window.alert('yanlış');
+           skor--;
+                  
+         }        
+         c.onclick = function(){
+           window.alert('yanlış');
+           skor--;
+                  
+         }
+      }
+     function soru7(){
+         soru.textContent = "Mars'ın yaşam koşulları Dünya'mızdaki hangi bölgeye benzetilmişdir";
+         A.textContent = "Kuzey Kutbu";
+         B.textContent = "Türkiye";
+         C.textContent = "Antartika";
+         D.textContent = "Sahra Çölü";
+         // c doğru
+         c.onclick = function(){
+           window.alert('doğru');
+           soru8();
+           skor++;
+          }
+         a.onclick = function(){
+           window.alert('yanlış');
+          }
+         b.onclick = function(){
+           window.alert('yanlış');
+           skor--;
+                  
+         }        
+         d.onclick = function(){
+           window.alert('yanlış');
+           skor--;
+                  
+         }
+      }
+     function soru8(){
+         soru.textContent = "Kozmosun kelime anlamı nedir";
+         A.textContent = "Evrendeki kaos";
+         B.textContent = "Evrendeki düzen";
+         C.textContent = "Uzay";
+         D.textContent = "Güneş Sistemi";
+         // b doğru
+         b.onclick = function(){
+           window.alert('doğru');
+           soru9();
+           skor++;
+          }
+         a.onclick = function(){
+           window.alert('yanlış');
+          }
+         c.onclick = function(){
+           window.alert('yanlış');
+           skor--;
+                  
+         }        
+         d.onclick = function(){
+           window.alert('yanlış');
+           skor--;
+                  
+         }
+      }
+    function soru9(){
+         soru.textContent = "Hawking Radyasyonu nedir";
+         A.textContent = "Atom bombalarının yaydığı radyasyon serpintisi";
+         B.textContent = "Güneş'den gelen radyasyon";
+         C.textContent = "Hadron parçacık çarpıştırıcılarındaki radyasyon";
+         D.textContent = "Karadeliklerin parçacık yayımlaması";
+         // d doğru
+         d.onclick = function(){
+           window.alert('doğru');
+           soru10();
+           skor++;
+          }
+         a.onclick = function(){
+           window.alert('yanlış');
+          }
+         b.onclick = function(){
+           window.alert('yanlış');
+           skor--;
+                  
+         }        
+         c.onclick = function(){
+           window.alert('yanlış');
+           skor--;
+                  
+         }
+      }
+    function soru10(){
+         soru.textContent = "Kambriyen Patlaması nedir";
+         A.textContent = "Kradelik patlaması";
+         B.textContent = "Süpervolkan patlaması";
+         C.textContent = "Yıldız patlaması";
+         D.textContent = "Canlılığın çeşitlenmesinde artan hız";
+         // d doğru
+         d.onclick = function(){
+           skor++;
+           window.alert('doğru');
+           window.alert(`Testi tamamladınız. Skorunuz = ${skor}`);
+           
+          }
+         a.onclick = function(){
+           window.alert('yanlış');
+          }
+         c.onclick = function(){
+           window.alert('yanlış');
+           skor--;
+                  
+         }        
+         b.onclick = function(){
+           window.alert('yanlış');
+           skor--;
+                  
+         }
+    }
+
+
+ 
+
+ 
+
+    soru1();
+   
+
+    
+    
+ </script>
+ </body>
+</html>
