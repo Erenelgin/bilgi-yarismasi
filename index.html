@@ -17,6 +17,7 @@
      border:none;
      padding:6px;
      border-radius:10px;
+     box-shadow:2px 2px 2px blue;
      cursor:pointer; 
      width:400px;
      margin-top:5px;
@@ -46,12 +47,13 @@
     }
 
     .cont{
-
         padding:30px;
         background-color:#1c2541;
         width:50%;
         height:auto;
         border-radius:20px;
+        animation-name:slide;
+        animation-duration:3s;
 
       }
 
@@ -59,7 +61,20 @@
       h1{
         color:#ffd700;
         font-style:italic;
+        text-shadow:3px 3px 3px yellow;
        }
+
+     @keyframes slide{
+      from{
+         transition:translateX(-20px);
+         transition:opacity(0);
+      }
+
+      to{
+        transition:translateX(0);
+        transition:opacity(1);
+      }
+     }
 
       @media (max-width: 768px) {
        .but{
